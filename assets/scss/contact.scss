@@ -1,0 +1,188 @@
+.contact {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+  background-color: $dark-gray;
+  @include for-size(tablet-view) {
+    padding: 0;
+  }
+  .container {
+    display: $d-flex;
+    align-items: $align-center;
+    flex-direction: $d-column;
+    @include for-size(tablet-view) {
+      flex-direction: $d-row;
+      gap: 20px;
+      align-items: $align-start;
+    }
+  }
+  .contact-address-section {
+    width: 100%;
+    @include for-size(tablet-view) {
+      width: 49%;
+      padding: 63px 0 54px;
+    }
+    @include for-size(laptop-view) {
+      padding: 103px 0 98px;
+    }
+    img {
+      display: block;
+      width: 85px;
+      margin-bottom: 20px;
+      @include for-size(desktop-view) {
+        margin-bottom: 32px;
+      }
+    }
+    .contact-content-area {
+      margin-bottom: 20px;
+      @include for-size(desktop-view) {
+        @include font-Size(20px);
+        margin-bottom: 52px;
+      }
+    }
+    .content-address-wrap {
+      margin-bottom: 30px;
+      @include for-size(desktop-view) {
+        margin-bottom: 57px;
+      }
+      h3 {
+        font-weight: 700;
+        margin-bottom: 10px;
+        @include font-Size(16px);
+        @include for-size(desktop-view) {
+          @include font-Size(20px);
+        }
+        @include for-size(xxl-desktop-view) {
+          @include font-Size(25px);
+        }
+      }
+      address {
+        color: $text;
+        margin-bottom: 27px;
+        @include for-size(desktop-view) {
+          @include font-Size(20px);
+        }
+      }
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      a {
+        @include font-Size(16px);
+        font-weight: 700;
+        transition: all 0.5s;
+        @include for-size(desktop-view) {
+          @include font-Size(20px);
+        }
+        &:hover {
+          color: $text;
+        }
+      }
+    }
+    .content-address-field {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .content-location-wrap {
+      h3 {
+        font-weight: 700;
+        margin-bottom: 10px;
+        @include font-Size(16px);
+        @include for-size(desktop-view) {
+          @include font-Size(20px);
+        }
+        @include for-size(xxl-desktop-view) {
+          @include font-Size(25px);
+        }
+      }
+      address {
+        @include for-size(desktop-view) {
+          @include font-Size(20px);
+        }
+      }
+    }
+    .mail-address {
+      color: $light_green;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .icon-call {
+      background-position: -100px -36px;
+      background-size: 200px 200px;
+      width: 15px;
+      height: 20px;
+    }
+    .icon-mail {
+      background-position: -148px -38px;
+      background-size: 200px 200px;
+      width: 18px;
+      height: 12px;
+    }
+    .icon-fax {
+      background-position: -121px -36px;
+      background-size: 200px 200px;
+      width: 19px;
+      height: 16px;
+    }
+    h1,
+    h2 {
+      position: relative;
+      margin-bottom: 59.44px;
+      @include for-size(desktop-view) {
+        margin-bottom: 98.44px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/curley-line.png") no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 24px;
+        background-size: contain;
+        transform: translateZ(-50%);
+        left: 0;
+        bottom: -51px;
+        @include for-size(desktop-view) {
+          bottom: -62px;
+        }
+        @include for-size(large-desktop-view) {
+          bottom: -69px;
+        }
+      }
+    }
+  }
+  .contact-map-section {
+    width: 100%;
+    @include for-size(tablet-view) {
+      width: 49%;
+      position: absolute;
+      right: 0;
+      height: 100%;
+    }
+    #map {
+      height: 450px;
+      width: 100%;
+      @include for-size(tablet-view) {
+        height: 907px;
+      }
+    }
+    .map-info {
+      text-align: $text-center;
+      position: absolute;
+      bottom: 112px;
+      width: 100%;
+      margin: 0 auto;
+      p {
+        @include font-Size(16px);
+        font-family: $robotolight;
+        color: $white;
+      }
+      h4 {
+        @include font-Size(16px);
+        font-family: $robotolight;
+      }
+    }
+  }
+}

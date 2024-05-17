@@ -1,0 +1,75 @@
+.doc-carousel {
+  background-color: $dark-gray;
+  padding: 40px 0;
+  text-align: $text-center;
+  @include for-size(tablet-view) {
+    padding: 50px 0;
+  }
+  @include for-size(desktop-view) {
+    padding: 80px 0;
+  }
+  @include for-size(large-desktop-view) {
+    padding: 107px 0;
+  }
+  .curly-img {
+    width: 85px;
+    margin: 0 auto 20px;
+    @include for-size(desktop-view) {
+      margin: 0 auto 42px;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .doc-slide {
+    transition: all 0.5s;
+    a {
+      display: block;
+    }
+    img {
+      display: block;
+      margin: 0 auto 17px;
+      width: 75px;
+    }
+    p {
+      transition: all 0.5s;
+      font-family: $robotobold;
+      line-height: 1.1;
+      @include font-Size(16px);
+    }
+    &:hover {
+      p {
+        color: $green;
+      }
+    }
+  }
+  h1,
+  h2 {
+    position: relative;
+    margin-bottom: 59.44px;
+    @include for-size(desktop-view) {
+      margin-bottom: 98.44px;
+    }
+
+    &:after {
+      content: "";
+      background: url("../images/curley-line.png") no-repeat;
+      position: absolute;
+      width: 85px;
+      height: 24px;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      bottom: -51px;
+      @include for-size(desktop-view) {
+        bottom: -62px;
+      }
+      @include for-size(large-desktop-view) {
+        bottom: -69px;
+      }
+    }
+  }
+}

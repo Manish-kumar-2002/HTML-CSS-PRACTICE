@@ -1,0 +1,110 @@
+.image-w-text {
+  @import "list";
+  background-color: $gray;
+  padding: 40px 0;
+  @include for-size(tablet-view) {
+    padding: 50px 0;
+  }
+  @include for-size(desktop-view) {
+    padding: 80px 0;
+  }
+  @include for-size(large-desktop-view) {
+    padding: 105px 0 115px;
+  }
+  .img-text-wrapper {
+    @include for-size(tablet-view) {
+      display: $d-flex;
+      align-items: $align-start;
+      justify-content: $justify-between;
+    }
+  }
+  .bussmann-img {
+    position: relative;
+    background-color: $white;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    @include for-size(tablet-view) {
+      width: 41%;
+      margin-bottom: 0;
+    }
+    @include for-size(large-desktop-view) {
+      min-height: 305px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -71px;
+      width: 232px;
+      height: 61px;
+      background: url(../images/shadow.png) no-repeat;
+      background-size: contain;
+      @include for-size(large-desktop-view) {
+        width: 507px;
+        height: 25px;
+        bottom: -71px;
+      }
+    }
+    img {
+      display: block;
+      width: 130px;
+      @include for-size(large-desktop-view) {
+        width: 264px;
+      }
+    }
+  }
+  .text-content {
+    @include for-size(tablet-view) {
+      width: 41%;
+    }
+    img {
+      display: block;
+      width: 85px;
+      margin-bottom: 15px;
+      @include for-size(desktop-view) {
+        margin-bottom: 32px;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      @include for-size(desktop-view) {
+        margin-bottom: 27px;
+      }
+    }
+    h1,
+    h2 {
+      position: relative;
+      margin-bottom: 59.44px;
+      @include for-size(desktop-view) {
+        margin-bottom: 98.44px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/curley-line.png") no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 24px;
+        background-size: contain;
+        transform: translateZ(-50%);
+        left: 0;
+        bottom: -51px;
+        @include for-size(desktop-view) {
+          bottom: -62px;
+        }
+        @include for-size(large-desktop-view) {
+          bottom: -69px;
+        }
+      }
+    }
+  }
+  &.flipped {
+    .img-text-wrapper {
+      @include for-size(tablet-view) {
+        flex-direction: $row-reverse;
+      }
+    }
+  }
+}

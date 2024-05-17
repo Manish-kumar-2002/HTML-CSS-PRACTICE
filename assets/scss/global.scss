@@ -1,0 +1,368 @@
+/*
+ 2.0.1) Font Face
+ -----------------------------*/
+//  @font-face
+@font-face {
+  font-family: "robotobold";
+  src: url("../fonts/roboto.bold-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotobold_italic";
+  src: url("../fonts/roboto.bold-italic-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.bold-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoitalic";
+  src: url("../fonts/roboto.italic-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotolight";
+  src: url("../fonts/roboto.light-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotolight_italic";
+  src: url("../fonts/roboto.light-italic-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.light-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotomedium";
+  src: url("../fonts/roboto.medium-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "robotoregular";
+  src: url("../fonts/roboto.regular-webfont.woff2") format("woff2"),
+    url("../fonts/roboto.regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-size: 100%;
+  font-family: $robotoregular;
+  line-height: 1.2;
+  color: $black;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+body img {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  -o-user-select: none;
+  user-select: none;
+}
+*:focus {
+  outline: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/*
+ 2.0.3) Form Elements
+ -----------------------------*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "Myriad Pro Regular", sans-serif;
+}
+
+/*** iPhone and iOS Form Input Zoom Fixes ***/
+/* Fix Input Zoom on devices older than iPhone 5: */
+@media screen and (max-device-width: 767px) {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"] {
+    font-size: 16px !important;
+  }
+}
+/*
+ 2.0.4) List Styles
+ ---------------------------------*/
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Sprite Icons
+-------------------------*/
+[class^="icon-"],
+[class*="icon-"] {
+  background: url("../images/sprites.png") no-repeat;
+  background-size: 400px 400px;
+  display: inline-block;
+  line-height: 1.4rem;
+  vertical-align: text-top;
+  font-size: 0;
+}
+
+.icon-location {
+  background-position: -4px -4px;
+  background-size: 200px 200px;
+  width: 12px;
+  height: 18px;
+}
+.icon-tel {
+  background-position: -22px -2px;
+  background-size: 200px 200px;
+  width: 15px;
+  height: 20px;
+}
+.icon-fax {
+  background-position: -43px -2px;
+  background-size: 200px 200px;
+  width: 19px;
+  height: 16px;
+}
+.icon-mail {
+  background-position: -68px -4px;
+  background-size: 200px 200px;
+  width: 18px;
+  height: 12px;
+}
+
+/*global heading*/
+.slick-dots {
+  display: $d-flex;
+  gap: 5px;
+  li {
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    background-color: $green;
+    border-radius: 50%;
+    @include for-size(desktop-view) {
+      width: 15px;
+      height: 15px;
+    }
+    &.slick-active {
+      background-color: $text;
+    }
+    button {
+      font-size: 0;
+      border: 0;
+      background: transparent;
+    }
+  }
+}
+
+.slick-arrow {
+  &.slick-prev,
+  &.slick-next {
+    position: absolute;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    background: transparent;
+    @include for-size(desktop-view) {
+      width: 80px;
+      height: 50px;
+    }
+    @include for-size(xxl-desktop-view) {
+      width: 125px;
+      height: 80px;
+      top: 41%;
+    }
+  }
+  &.slick-prev {
+    background-image: url("../images/left-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    left: -13px;
+    @include for-size(desktop-view) {
+      left: -20px;
+    }
+    @include for-size(xxl-desktop-view) {
+      left: -83px;
+    }
+  }
+  &.slick-next {
+    background-image: url("../images/right-arrow.png");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+    right: -13px;
+    @include for-size(desktop-view) {
+      right: -20px;
+    }
+    @include for-size(xxl-desktop-view) {
+      right: -70px;
+    }
+  }
+}
+
+.btn-cta {
+  display: inline-block;
+  @include font-Size(16px);
+  padding: 6px 17px 9px;
+  transition: all 0.5s;
+  border-radius: 8px;
+  color: $white;
+  background: $green;
+  @include for-size(tablet-view) {
+    padding: 12px 24px;
+  }
+}
+
+ol {
+  counter-reset: $my-awesome-counter;
+  text-align: left;
+  overflow: hidden;
+  list-style-position: inside;
+  padding-left: 10px;
+  li {
+    position: relative;
+    padding-left: 20px;
+    counter-increment: $my-awesome-counter;
+    margin-bottom: 10px;
+    @include for-size(tablet-view) {
+      padding-left: 22px;
+    }
+    @include for-size(desktop-view) {
+      @include font-Size(20px);
+    }
+    &::after {
+      position: absolute;
+      left: 0px;
+      top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      content: counter($my-awesome-counter) "";
+      color: $green;
+      font-weight: 700;
+      @include for-size(tablet-view) {
+        left: -8px;
+      }
+    }
+  }
+}
+
+p {
+  color: $text;
+  line-height: 1.4;
+  font-family: $robotolight;
+  @include font-Size(16px);
+  margin-bottom: 8px;
+  @include for-size(desktop-view) {
+    @include font-Size(20px);
+  }
+}
+
+h1,
+h2 {
+  font-family: $robotolight;
+  @include font-Size(25px);
+  margin-bottom: 15px;
+  @include for-size(tablet-view) {
+    @include font-Size(30px);
+  }
+  @include for-size(desktop-view) {
+    @include font-Size(35px);
+    margin-bottom: 26px;
+  }
+  @include for-size(large-desktop-view) {
+    @include font-Size(48px);
+    margin-bottom: 33px;
+  }
+}
+h4 {
+  font-family: $robotobold;
+  @include font-Size(18px);
+  color: $light_green;
+  margin-bottom: 5px;
+  @include for-size(desktop-view) {
+    @include font-Size(25px);
+  }
+}
+
+select {
+  display: block;
+  margin-bottom: 20px;
+  &.form-select {
+    border-radius: 0;
+    padding: 12px 29px;
+    &:focus {
+      box-shadow: none;
+      border-color: #dee2e6;
+    }
+  }
+}
+
+input,
+textarea {
+  display: inline-block;
+  @include font-Size(16px);
+  color: inherit;
+  background: transparent;
+  line-height: normal;
+  margin-bottom: 20px;
+  background-color: #e9edf5;
+  &.form-control {
+    border-radius: 0;
+    padding: 12px 29px;
+    &:focus {
+      box-shadow: none;
+      border-color: #dee2e6;
+    }
+  }
+  label {
+    color: $text;
+  }
+}
+
+/* Containers*/
+.container {
+  max-width: 1472px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+.btn-cta:hover,
+.btn-cta:active {
+  background: #04562b !important;
+  color: white !important;
+}

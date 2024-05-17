@@ -1,0 +1,131 @@
+.content {
+  @import "list";
+  background-color: $white;
+  padding: 40px 0;
+  @include for-size(tablet-view) {
+    padding: 50px 0;
+  }
+  @include for-size(desktop-view) {
+    padding: 80px 0;
+  }
+  @include for-size(xxl-desktop-view) {
+    padding: 128px 0 170px;
+  }
+  p {
+    transition: all 0.5s;
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  h1,
+  h2,
+  h4 {
+    text-align: $text-center;
+  }
+  .content-wrap {
+    p {
+      margin-bottom: 15px;
+      font-family: $robotolight;
+      @include for-size(desktop-view) {
+        margin-bottom: 27px;
+        padding: 0 70px;
+      }
+    }
+    img {
+      display: block;
+      width: 85px;
+      margin: 0 auto 20px;
+      @include for-size(desktop-view) {
+        margin: 0 auto 41px;
+      }
+    }
+  }
+  &.bg {
+    background: url("../images/electricity-img2.jpg") no-repeat;
+    background-size: cover;
+    .content-wrap {
+      h1,
+      h2,
+      p {
+        color: $white;
+      }
+    }
+  }
+  .curley-img {
+    display: block;
+    width: 85px;
+    float: none;
+    margin: 0 auto 15px;
+    @include for-size(desktop-view) {
+      margin: 0 auto 41px;
+    }
+  }
+
+  h1,
+  h2 {
+    position: relative;
+    margin-bottom: 59.44px;
+    @include for-size(desktop-view) {
+      margin-bottom: 98.44px;
+    }
+
+    &:after {
+      content: "";
+      background: url("../images/curley-line.png") no-repeat;
+      position: absolute;
+      width: 85px;
+      height: 24px;
+      background-size: contain;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      bottom: -51px;
+      @include for-size(desktop-view) {
+        bottom: -62px;
+      }
+      @include for-size(large-desktop-view) {
+        bottom: -69px;
+      }
+    }
+  }
+  p {
+    a {
+      color: $green;
+      font-family: $robotomedium;
+    }
+  }
+  strong {
+    font-family: $robotomedium;
+    font-weight: normal;
+  }
+  img {
+    display: block;
+    margin: 29px auto 29px;
+    @include for-size(tablet-view) {
+      width: 35%;
+      float: left;
+      margin-right: 30px;
+    }
+  }
+  h3 {
+    margin: 15px 0;
+    @include for-size(tablet-view) {
+      margin: 30px 0 15px;
+      @include font-Size(28px);
+    }
+    @include for-size(large-desktop-view) {
+      margin: 73px 0 30px;
+      @include font-Size(35px);
+    }
+  }
+  &.narrow {
+    text-align: $text-center;
+    @include for-size(xxl-desktop-view) {
+      padding: 101px 0 126px;
+    }
+    .container {
+      max-width: 1045px;
+    }
+  }
+}

@@ -1,0 +1,67 @@
+/*
+ Font-family
+ -------------------------*/
+ $robotobold:'robotobold',sans-serif;
+ $robotobold_italic: 'robotobold_italic',sans-serif;
+ $robotoitalic: 'robotoitalic',sans-serif;
+ $robotolight: 'robotolight',sans-serif;
+ $robotolight_italic: 'robotolight_italic',sans-serif;
+ $robotomedium: 'robotomedium',sans-serif;
+ $robotoregular: 'robotoregular',sans-serif;
+ 
+ /*
+  Font-color
+  -------------------------*/
+$bg_dark:#161920;
+$bg_green:#479c5d;
+$green:#008b4d;
+$text:#161920;
+$white:#ffffff;
+$light_green:#008b4d;
+$light-gray:#f8f9fa;
+$dark-gray:#ebebeb;
+$gray:#f6f7f8;
+$black:#000;
+$border-clr:#ccc8c8;
+ /*
+  Font-weight
+  -------------------------*/
+ $fw-thin: 100;
+ $fw-light: 300;
+ $fw-regular: 400;
+ $fw-medium: 500;
+ $fw-bold: 700;
+ 
+ /*
+  Alignment
+  -------------------------*/
+ $align-stretch: stretch;
+ $align-center: center;
+ $align-start: flex-start;
+ $align-end: flex-end;
+ $align-end: end;
+ /*
+  justify
+  -------------------------*/
+ $justify-start: flex-start;
+ $justify-end: flex-end;
+ $justify-center: center;
+ $justify-between: space-between;
+ $justify-around: space-around;
+ /*
+  text alignment
+  -------------------------*/
+ $text-left: left;
+ $text-center: center;
+ $text-right: right;
+ 
+ /*
+  flex
+  -------------------------*/
+ $d-flex: flex;
+ $d-wrap: wrap;
+ $d-column: column;
+ $d-row: row;
+ $row-reverse: row-reverse;
+ $column-reverse: column-reverse;
+$my-awesome-counter:my-awesome-counter;

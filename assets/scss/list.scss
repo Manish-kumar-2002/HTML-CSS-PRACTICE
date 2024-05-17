@@ -1,0 +1,35 @@
+ul{
+    margin-bottom: 30px;
+    text-align: left;
+    overflow: hidden;
+    list-style-position: inside;
+    padding-left: 10px;
+    li{
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 15px;
+        @include for-size(tablet-view) {
+          padding-left: 22px;
+        }
+        @include for-size(desktop-view) {
+            @include font-Size(20px);
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 4px;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $green;
+            @include for-size(tablet-view) {
+                width: 10px;
+                height: 10px;
+                left: -8px;
+                top: 7px;
+            }
+        }
+     
+    }
+}

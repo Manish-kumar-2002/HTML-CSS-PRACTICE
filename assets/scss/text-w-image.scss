@@ -1,0 +1,228 @@
+.text-w-image {
+  position: relative;
+  background-color: $light-gray;
+  padding: 40px 0;
+  @include for-size(tablet-view) {
+    padding: 0;
+  }
+  .text-img-wrap {
+    @include for-size(tablet-view) {
+      display: $d-flex;
+      padding: 0;
+    }
+  }
+  .text-content {
+    @include for-size(tablet-view) {
+      width: 48%;
+      padding: 25px 25px 25px 0;
+    }
+    @include for-size(desktop-view) {
+      padding: 50px 45px 50px 0;
+    }
+    @include for-size(large-desktop-view) {
+      padding: 105px 65px 91px 0;
+    }
+    img {
+      display: block;
+      width: 85px;
+      margin-bottom: 15px;
+      @include for-size(desktop-view) {
+        margin-bottom: 32px;
+      }
+    }
+    ul {
+      margin-bottom: 20px;
+      @include for-size(tablet-view) {
+        margin-bottom: 25px;
+      }
+      li {
+        display: $d-flex;
+        align-items: $align-start;
+        margin-bottom: 10px;
+        padding-left: 45px;
+        position: relative;
+        @include for-size(desktop-view) {
+          margin-bottom: 14px;
+          padding-left: 50px;
+        }
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .btn-cta {
+      margin-bottom: 25px;
+      @include for-size(tablet-view) {
+        margin-bottom: 0;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      @include for-size(desktop-view) {
+        margin-bottom: 27px;
+      }
+    }
+    .industries-symbol {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background: url("../images/accordion1.png") no-repeat;
+        background-size: cover;
+      }
+    }
+    .engine-symbol {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 25px;
+        height: 25px;
+        background: url("../images/accordion2.png") no-repeat;
+        background-size: cover;
+      }
+    }
+    .mobility-symbol {
+      &::after {
+        position: absolute;
+        content: "";
+        left: -9px;
+        width: 48px;
+        height: 27px;
+        background: url("../images/accordion3.png") no-repeat;
+        background-size: 39px;
+      }
+    }
+    .energy-symbol {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        background: url("../images/accordion4.png") no-repeat;
+        background-size: 29px;
+      }
+    }
+    .infra-symbol {
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        width: 38px;
+        height: 37px;
+        background: url("../images/accordion5.png") no-repeat;
+        background-size: 30px;
+      }
+    }
+    .transport-symbol {
+      &::after {
+        top: -3px;
+        position: absolute;
+        content: "";
+        left: 4px;
+        width: 30px;
+        height: 30px;
+        background: url("../images/accordion6.png") no-repeat;
+        background-size: 25px;
+      }
+    }
+    h1,
+    h2 {
+      position: relative;
+      margin-bottom: 59.44px;
+      @include for-size(desktop-view) {
+        margin-bottom: 98.44px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/curley-line.png") no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 24px;
+        background-size: contain;
+        transform: translateZ(-50%);
+        left: 0;
+        bottom: -51px;
+        @include for-size(desktop-view) {
+          bottom: -62px;
+        }
+        @include for-size(large-desktop-view) {
+          bottom: -69px;
+        }
+      }
+    }
+  }
+  .text-img {
+    @include for-size(tablet-view) {
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .slick-dots {
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -53px;
+    }
+    .img-wrapper,
+    .slick-list,
+    .slick-track,
+    .slick-slide > div,
+    .slick-slide,
+    .img-slide {
+      height: 100%;
+    }
+  }
+  &.flipped {
+    .text-img-wrap {
+      @include for-size(tablet-view) {
+        flex-direction: $row-reverse;
+      }
+    }
+    .text-img {
+      @include for-size(tablet-view) {
+        left: 0;
+      }
+    }
+    .text-content {
+      @include for-size(tablet-view) {
+        padding: 25px 0 25px 25px;
+      }
+      @include for-size(desktop-view) {
+        padding: 50px 0 70px 45px;
+      }
+      @include for-size(large-desktop-view) {
+        padding: 101px 0px 96px 96px;
+      }
+      p {
+        @include for-size(desktop-view) {
+          margin-bottom: 39px;
+        }
+      }
+    }
+  }
+  &.dark {
+    background-color: $bg_dark;
+    .text-content {
+      h1,
+      h2,
+      p,
+      li,
+      a {
+        color: $white;
+      }
+    }
+  }
+}

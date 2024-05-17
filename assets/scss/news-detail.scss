@@ -1,0 +1,106 @@
+.news-detail {
+  @import "list";
+  padding: 40px 0;
+  background-color: $dark-gray;
+  @include for-size(tablet-view) {
+    padding: 50px 0;
+  }
+  @include for-size(large-desktop-view) {
+    padding: 80px 0;
+  }
+  @include for-size(large-desktop-view) {
+    padding: 125px 0 162px;
+  }
+  .heading-wrap {
+    text-align: $text-center;
+    img {
+      display: block;
+      width: 85px;
+      margin: 0 auto 15px;
+      @include for-size(desktop-view) {
+        margin: 0 auto 44px;
+      }
+    }
+    h1,
+    h2 {
+      position: relative;
+      margin-bottom: 59.44px;
+      @include for-size(desktop-view) {
+        margin-bottom: 98.44px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/curley-line.png") no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 24px;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: -51px;
+        @include for-size(desktop-view) {
+          bottom: -62px;
+        }
+        @include for-size(large-desktop-view) {
+          bottom: -69px;
+        }
+      }
+    }
+  }
+  .news-details-info {
+    background-color: $white;
+    padding: 25px;
+    @include for-size(desktop-view) {
+      padding: 50px;
+    }
+    @include for-size(large-desktop-view) {
+      padding: 69px 68px 43px 80px;
+    }
+    h3 {
+      font-family: $robotomedium;
+      margin-bottom: 15px;
+      @include for-size(tablet-view) {
+        @include font-Size(25px);
+      }
+      @include for-size(desktop-view) {
+        @include font-Size(35px);
+      }
+      @include for-size(large-desktop-view) {
+        @include font-Size(49px);
+      }
+    }
+    p {
+      margin-bottom: 10px;
+      @include for-size(tablet-view) {
+        margin-bottom: 25px;
+      }
+      @include for-size(desktop-view) {
+        margin-bottom: 39px;
+      }
+    }
+  }
+  .date-info {
+    display: $d-flex;
+    align-items: $align-center;
+    margin-bottom: 15px;
+    @include for-size(tablet-view) {
+      margin-bottom: 30px;
+    }
+  }
+  .icon-calendar {
+    background-position: -175px -56px;
+    background-size: 200px 200px;
+    width: 17px;
+    height: 18px;
+    margin-right: 12px;
+  }
+  .date {
+    color: $green;
+    @include font-Size(20px);
+    font-family: $robotobold_italic;
+    @include for-size(desktop-view) {
+      @include font-Size(25px);
+    }
+  }
+}

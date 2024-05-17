@@ -1,0 +1,97 @@
+.wide-image {
+  min-height: 200px;
+
+  @include for-size(large-desktop-view) {
+    min-height: 433px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+    @include for-size(large-desktop-view) {
+      height: 433px;
+    }
+  }
+
+  &.small {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(65, 142, 79, 1) 0%,
+        rgba(82, 179, 117, 1) 100%
+      );
+      z-index: 0;
+      opacity: 0.88;
+    }
+
+    .container {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      margin: 0 auto;
+      height: 200px;
+      display: $d-flex;
+      align-items: $align-center;
+      justify-content: $justify-center;
+      z-index: 1;
+
+      @include for-size(large-desktop-view) {
+        height: 433px;
+      }
+    }
+
+    .wide-img-info {
+      display: $d-flex;
+      align-items: $align-center;
+      justify-content: $justify-center;
+      flex-direction: $d-column;
+    }
+
+    h3 {
+      display: block;
+      color: $black;
+      font-family: $robotobold_italic;
+      @include font-Size(20px);
+
+      @include for-size(tablet-view) {
+        @include font-Size(25px);
+      }
+
+      @include for-size(large-desktop-view) {
+        @include font-Size(35px);
+      }
+    }
+
+    h1,
+    h2 {
+      display: block;
+      color: $white;
+      font-family: $robotolight_italic;
+      @include font-Size(30px);
+
+      @include for-size(tablet-view) {
+        @include font-Size(45px);
+      }
+
+      @include for-size(large-desktop-view) {
+        @include font-Size(50px);
+      }
+
+      @include for-size(xxl-desktop-view) {
+        @include font-Size(57px);
+      }
+    }
+  }
+}

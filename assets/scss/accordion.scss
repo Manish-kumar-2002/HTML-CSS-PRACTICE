@@ -1,0 +1,293 @@
+.accordion {
+  padding: 40px 0;
+  background-color: $white;
+  @include for-size(tablet-view) {
+    padding: 50px 0;
+  }
+  @include for-size(desktop-view) {
+    padding: 80px 0;
+  }
+  @include for-size(large-desktop-view) {
+    padding: 126px 0;
+  }
+  .heading-wrap {
+    text-align: $text-center;
+    margin-bottom: 30px;
+    @include for-size(large-desktop-view) {
+      margin-bottom: 58px;
+    }
+    img {
+      display: block;
+      width: 85px;
+      margin: 0 auto 15px;
+      @include for-size(desktop-view) {
+        margin: 0 auto 32px;
+      }
+    }
+    h1,
+    h2 {
+      position: relative;
+      margin-bottom: 59.44px;
+      @include for-size(desktop-view) {
+        margin-bottom: 98.44px;
+      }
+
+      &:after {
+        content: "";
+        background: url("../images/curley-line.png") no-repeat;
+        position: absolute;
+        width: 85px;
+        height: 24px;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        bottom: -51px;
+        @include for-size(desktop-view) {
+          bottom: -62px;
+        }
+        @include for-size(large-desktop-view) {
+          bottom: -69px;
+        }
+      }
+    }
+  }
+  .accordion-item {
+    border-bottom: 1px solid $border-clr !important;
+    .accordion-body {
+      padding: 16px 0;
+      border-top: 1px solid $border-clr !important;
+      @include for-size(tablet-view) {
+        display: $d-flex;
+        justify-content: $justify-between;
+        padding: 25px 0;
+      }
+      @include for-size(large-desktop-view) {
+        padding: 65px 0 41px;
+      }
+    }
+    p {
+      a {
+        color: $green;
+        font-family: $robotomedium;
+      }
+    }
+    strong {
+      font-family: $robotomedium;
+      font-weight: normal;
+    }
+  }
+  ul {
+    margin-bottom: 15px;
+    @include for-size(desktop-view) {
+      margin-bottom: 38px;
+    }
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      @include for-size(desktop-view) {
+        padding-left: 40px;
+        @include font-Size(20px);
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 6px;
+        width: 5px;
+        height: 5px;
+        background-color: $green;
+        border-radius: 50%;
+        @include for-size(desktop-view) {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+  ol {
+    margin-bottom: 15px;
+    @include for-size(desktop-view) {
+      margin-bottom: 38px;
+    }
+    li {
+      position: relative;
+      margin-bottom: 5px;
+      padding-left: 15px;
+      @include for-size(desktop-view) {
+        padding-left: 40px;
+        @include font-Size(20px);
+      }
+      &::after {
+        top: 6px !important;
+        left: 0px !important;
+        @include for-size(desktop-view) {
+          left: 0px !important;
+          top: 2px !important;
+        }
+      }
+    }
+  }
+  .accordion-button {
+    position: relative;
+    padding: 16px 30px 16px 0px;
+    font-family: $robotolight;
+    @include for-size(tablet-view) {
+      margin-bottom: 0;
+      @include font-Size(25px);
+      padding: 14px 50px 14px 0px;
+    }
+    @include for-size(desktop-view) {
+      @include font-Size(35px);
+      padding: 14px 120px 14px 0px;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+    &:not(.collapsed) {
+      background-color: transparent;
+    }
+    img {
+      flex: none;
+      margin-right: 10px;
+      width: 40px;
+      @include for-size(tablet-view) {
+        margin-right: 16px;
+      }
+    }
+    &.collapsed {
+      &::after {
+        background: url("../images/sprites.png") no-repeat;
+        background-position: -1.4px -109px;
+        background-size: 200px 200px;
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &::after {
+      background: url("../images/sprites.png") no-repeat;
+      background-position: -1.4px -71px;
+      background-size: 200px 200px;
+      width: 29px;
+      height: 29px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .accordion-img {
+    position: relative;
+    margin-bottom: 50px;
+    @include for-size(tablet-view) {
+      margin-bottom: 0;
+      width: 35%;
+    }
+    @include for-size(desktop-view) {
+      width: 37%;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -74px;
+      width: 232px;
+      height: 61px;
+      background: url(../images/shadow.png) no-repeat;
+      background-size: contain;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      @include for-size(tablet-view) {
+        top: 188px;
+      }
+      @include for-size(tabletLarge-view) {
+        top: 243px;
+        width: 337px;
+      }
+      @include for-size(desktop-view) {
+        top: 303px;
+        width: 430px;
+      }
+      @include for-size(large-desktop-view) {
+        width: 507px;
+        height: 25px;
+        top: 367px;
+      }
+    }
+  }
+  .accordion-info {
+    @include for-size(tablet-view) {
+      width: 60%;
+    }
+    @include for-size(desktop-view) {
+      width: 50%;
+    }
+    h4 {
+      @include font-Size(20px);
+      color: $text;
+      font-family: $robotomedium;
+      margin-bottom: 10px;
+      @include for-size(desktop-view) {
+        @include font-Size(25px);
+      }
+    }
+    p {
+      @include font-Size(16px);
+      margin-bottom: 15px;
+      @include for-size(desktop-view) {
+        @include font-Size(20px);
+        margin-bottom: 40px;
+      }
+      a {
+        transition: all 0.5s;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .documents-wrapper {
+    margin-top: 30px;
+    @include for-size(tablet-view) {
+      display: $d-flex;
+    }
+    @include for-size(large-desktop-view) {
+      margin-top: 79px;
+    }
+    img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 80px;
+    }
+    .document-info {
+      margin-bottom: 25px;
+      transition: all 0.5s;
+      @include for-size(tablet-view) {
+        width: 25%;
+        margin: 0 25px 0 0;
+        text-align: $text-center;
+      }
+      @include for-size(xxl-desktop-view) {
+        margin: 0 85px 0 0;
+      }
+      &:last-child {
+        margin: 0;
+      }
+      p {
+        transition: all 0.5s;
+        font-family: $robotobold;
+        @include font-Size(16px);
+        text-align: $text-center;
+      }
+      &:hover {
+        p {
+          color: $green;
+        }
+      }
+    }
+  }
+}

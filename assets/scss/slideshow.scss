@@ -1,0 +1,90 @@
+.slideshow{
+	position: relative;
+	overflow: hidden;
+	background-image: url("../images/banner3.png");
+	background-size: cover;
+	padding: 40px 0 50px;
+	@include for-size(tablet-view) {
+		padding: 50px 0;
+	}
+	@include for-size(large-desktop-view) {
+		padding: 169px 0 55px;
+	}
+	
+	.slide{
+		@include for-size(tablet-view) {
+			display: $d-flex !important;
+		}
+		.slide-img{
+			max-width: 320px;
+			margin: 0 auto;
+			@include for-size(tablet-view) {
+				max-width: none;
+				margin: 0;
+			}
+		}
+	}
+	.slide-content{
+		margin-bottom: 25px;
+		@include for-size(tablet-view) {
+			margin-bottom: 0;
+			width: 46%;
+			padding: 52px 0 0 40px;
+		}
+		@include for-size(large-desktop-view) {
+			padding: 52px 0 0 90px;
+		}
+		h4{
+			@include font-Size(25px);
+			color:$light_green;
+			font-family:$robotobold_italic;
+			@include for-size(tabletLarge-view) {
+				@include font-Size(30px);
+			}
+			@include for-size(large-desktop-view) {
+				@include font-Size(40px);
+			}
+			span{
+				display: inline-block;
+				text-transform: uppercase;
+			}
+		}
+		h1,h2{
+			color:$text;
+			line-height: 1.1;
+			font-family:$robotolight_italic;
+			@include font-Size(35px);
+			margin-bottom: 8px;
+			@include for-size(tablet-view) {
+				margin-bottom: 20px;
+			}
+			@include for-size(desktop-view) {
+				@include font-Size(45px);
+			}
+			@include for-size(large-desktop-view) {
+				@include font-Size(60px);
+				margin-bottom: 32px;
+			}
+			@include for-size(xxl-desktop-view) {
+				@include font-Size(79px);
+			}
+		}
+	}
+	.slide-img{
+		@include for-size(tablet-view) {
+			width: 45%;
+		}
+	}
+.slick-dots {
+		position: absolute;
+		bottom: -28px;
+		border: 0;
+		left: 50%;
+		margin: 0 auto;
+		transform: translateX(-50%);
+		@include for-size(tablet-view) {
+			bottom: -10px;
+		}
+	}
+
+}
